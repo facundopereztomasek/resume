@@ -1,0 +1,38 @@
+/* General Settings */
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.animate-top{
+	@include transition( top , 0.3s , ease );
+}
+
+/* NAV-BAR */
+
+.nav-bar{
+	text-align:center;
+	padding: 0 10px;
+	position:fixed;
+	height:40px;
+	top:-40px;
+	left:0;
+	right:0;
+	&.nav-bar__active{
+		top:0;
+	}
+	ul{
+		margin:0;
+		list-style:none;
+		display:inline-block;
+
+		li{
+			display:inline-block;
+			padding:10px;
+			font-size:20px;
+
+			&.option__active a{
+				color:red !important;
+			}
+		}
+	}
+}
